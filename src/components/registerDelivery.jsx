@@ -6,7 +6,6 @@ import { customerList } from '../functions/customerList';
 import { deliveriesList } from '../functions/deliveriesList';
 import Select from 'react-select';
 import { optionsCustomer } from '../functions/optionsCustomer';
-import 'react-datepicker/dist/react-datepicker.css';
 import IndividualDeliveries from './individualDeliveries';
 import Calculator from './calculator';
 import { FaCalculator } from 'react-icons/fa';
