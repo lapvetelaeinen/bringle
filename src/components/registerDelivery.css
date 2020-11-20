@@ -1,0 +1,90 @@
+main {
+  margin: 1rem auto;
+  width: 90%;
+  max-width: 1000px;
+  background-color: #dde1e7;
+}
+
+main form {
+  position: relative;
+  width: 100%;
+  background-color: #dde1e7;
+  box-shadow: -4px -4px 7px #ffffff73, 4px 4px 5px rgba(94, 104, 121, 0.288);
+  padding: 10px;
+  margin-top: 30px;
+  border-radius: 15px;
+}
+
+.select-customer-div {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+
+.select-customer {
+  width: 100px;
+  flex-grow: 1;
+}
+
+.date {
+  width: 115px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.headings {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.form-box {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr 4fr;
+  grid-template-rows: 35px 100px;
+  justify-content: center;
+  justify-items: center;
+}
+
+.register-field {
+  width: 95%;
+  height: 60px;
+  background-color: #dde1e7;
+  border: none;
+  box-shadow: inset -4px -4px 7px #ffffff73,
+    inset 4px 4px 5px rgba(94, 104, 121, 0.288);
+  justify-self: start;
+}
+
+.calculator-button {
+  margin-top: 13px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.calculator-button:hover {
+  font-size: 30px;
+  color: rgb(211, 116, 61);
+  margin-right: 10px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.first-label {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  justify-self: start;
+}
+
+.second-label {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  justify-self: start;
+}
+
+.button-box {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5px;
+}

@@ -1,0 +1,18 @@
+.delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  height: 40px;
+  width: 70%;
+  margin-top: 10px;
+  background-color: rgb(255, 76, 76);
+  font-size: 18px;
+  color: azure;
+  cursor: pointer;
+}
+
+.delete:hover {
+  background-color: rgb(223, 63, 63);
+}
