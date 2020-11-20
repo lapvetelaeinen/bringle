@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Button from './button';
 import './calculator.css';
+import * as math from 'mathjs';
 
 class Calculator extends Component {
     state = {
@@ -44,7 +45,7 @@ class Calculator extends Component {
     }
 
     handleEqual = () => {
-        const ecvation = eval(`${this.state.firstNumber} ${this.state.operator} ${this.state.secondNumber}`);
+        const ecvation = math.evaluate(`${this.state.firstNumber} ${this.state.operator} ${this.state.secondNumber}`);
         this.setState({ input: ecvation });
         const firstNumber = "";
         this.setState({ firstNumber });

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { customerList } from '../functions/customerList';
-import { deliveriesList } from '../functions/deliveriesList';
 import './listOfCustomers.css';
 
 class ListOfCustomers extends Component {

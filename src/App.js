@@ -6,9 +6,7 @@ import NewDelivery from './components/newDelivery';
 import NotFound from './components/notFound';
 import { customerList } from './functions/customerList';
 import "./App.css";
-import Calculator from './components/calculator';
 import Stock from './components/stock';
-import NavBar from './components/navBar';
 
 class App extends Component {
   state = { 
