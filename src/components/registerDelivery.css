@@ -88,3 +88,11 @@ main form {
   justify-content: flex-end;
   margin: 5px;
 }
+
+.date-box {
+  border: 2px solid rgb(136, 136, 136);
+  margin-right: 10px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: white;
+}

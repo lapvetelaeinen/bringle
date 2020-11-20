@@ -6,11 +6,11 @@ import { customerList } from '../functions/customerList';
 import { deliveriesList } from '../functions/deliveriesList';
 import Select from 'react-select';
 import { optionsCustomer } from '../functions/optionsCustomer';
-import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import IndividualDeliveries from './individualDeliveries';
 import Calculator from './calculator';
 import { FaCalculator } from 'react-icons/fa';
+import Calendar from 'react-calendar';
 
 
 
@@ -19,6 +19,7 @@ class RegisterDelivery extends Component {
   state = { 
     modalIsOpen: false,
     calculatorIsOpen: false,
+    dateIsOpen: false,
     selectedField: "",
     delivery: {
       date: new Date(),
@@ -56,6 +57,11 @@ class RegisterDelivery extends Component {
        e.preventDefault();
        this.setState({ modalIsOpen: !this.state.modalIsOpen});
        console.log(this.state.modalIsOpen)
+     }
+
+     toggleDate = (e) => {
+       e.preventDefault();
+       this.setState({ dateIsOpen: !this.state.dateIsOpen});
      }
 
      toggleCalculator = (e) => {
@@ -101,12 +107,9 @@ class RegisterDelivery extends Component {
           <main>
             <form name="register-delivery" onSubmit={this.handleSubmit}>
               <div className="select-customer-div">
-                <DatePicker
-                className="date"
-                selected={this.state.delivery.date}
-                onChange={this.handleDate}
-                dateFormat='dd/MM/yyyy'
-                />
+                <div className="date-box" onClick={this.toggleDate}>
+                  {JSON.stringify(this.state.delivery.date).slice(1,11)}
+                </div>
                 <Select
                 className="select-customer"
                 placeholder="Välj kund"
@@ -163,6 +166,16 @@ class RegisterDelivery extends Component {
                       <div className="overlay-styles" onClick={() => this.setState({ calculatorIsOpen: !this.state.calculatorIsOpen})}></div>
                       <div className="modal-styles">
                         <Calculator sendResult={this.handleResult}/>
+                      </div>
+                    </React.Fragment>
+                  : null
+                }
+
+                {this.state.dateIsOpen
+                  ? <React.Fragment>
+                      <div className="overlay-styles" onClick={() => this.setState({ dateIsOpen: !this.state.dateIsOpen})}></div>
+                      <div className="modal-styles">
+                        <Calendar onChange={this.handleDate}/>
                       </div>
                     </React.Fragment>
                   : null
